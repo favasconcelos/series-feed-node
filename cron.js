@@ -19,7 +19,6 @@ class Cron {
 
     onFetchCallback(err, data) {
         console.log('Cron - onFetchCallback');
-        console.dir(this);
         if (err) {
             console.error(err);
         } else {
@@ -37,7 +36,11 @@ class Cron {
                 var item = new Item(rawItem);
                 if (item.isValid()) {
                     items.push(item);
-                }
+                } 
+                // else 
+                // {
+                //     console.log('Not Valid: %s', item.title);
+                // }
             }
         }
         this.processItems(items);
@@ -45,6 +48,7 @@ class Cron {
 
     processItems(items) {
         console.log('Cron - processItems');
+        items = items.filter(Feed.filter);
         console.dir(items);
     }
 

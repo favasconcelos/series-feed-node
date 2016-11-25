@@ -1,0 +1,24 @@
+{
+  "default": {
+    "quality": "(value == '720p')"
+  },
+  "series": [
+    {
+      "name": "Game of Thrones",
+      "season": "(value >= 7)",
+      "quality": "(value == '1080p')"
+    },
+    {
+      "name": "The Walking Dead",
+      "season": "(value >= 7)"
+    },
+    {
+      "name": "The Big Bang Theory",
+      "season": "(value >= 7)"
+    },
+    {
+      "name": "The Vampire Diaries",
+      "season": "(value >= 8)"
+    }
+  ]
+}
