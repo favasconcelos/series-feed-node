@@ -3,7 +3,6 @@ const scheduler = require('node-cron');
 const Feed = require('./feed');
 const Item = require('./item');
 
-
 class Cron {
 
     constructor() {

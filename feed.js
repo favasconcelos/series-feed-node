@@ -3,7 +3,6 @@ const xml2js = require('xml2js');
 
 const config = require('./series-config');
 
-
 class Feed {
 
     static fetchFromFile(callback) {
@@ -28,7 +27,6 @@ class Feed {
             // if the series match with any
             var serie = series[index];
             // check if this serie is from this config
-            // console.log('[%s][%s]', item.title.toLowerCase(), serie.name.toLowerCase());
             if (item.title.toLowerCase().indexOf(serie.name.toLowerCase()) !== -1) {
                 quality = serie.quality || quality;
                 // check if the quality is the wanted
